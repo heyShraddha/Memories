@@ -3,10 +3,8 @@ import * as api from '../api';
 //Action Creators
 export const getPost = () => async(dispatch) => {
     try{
-        console.log('I am in get Post function action');
         debugger;
         const { data } = await api.fetchPosts();
-        console.log('I am in after data thing', data);
         dispatch({ type: 'FETCH_ALL', payload: data });
     }
     catch(error){
